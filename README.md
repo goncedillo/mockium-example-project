@@ -2,7 +2,7 @@
     <img alt="mockium-logo" src="https://drive.google.com/uc?export=view&id=1XIatwEA1_4Q2g0S1_-QY4ISbUWsxdeW-">
 </p>
 
-This is an example project for learning to use [Mockium](https://github.com/goncedillo/mockium) mock server.
+This is an example project for learning how to use [Mockium](https://github.com/goncedillo/mockium) mock server.
 The goal of this repo is just learn the basis of working with Mockium in a real project and get a starting point.
 
 ## How to use this example project
