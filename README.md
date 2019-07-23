@@ -25,9 +25,9 @@ You can start the Mockium server for testing the sample endpoints:
 mockium -s ./mockium-files
 ```
 
-**That's it** At tis point you can see that Moclium is running in your terminal, exposing services at [port 5000](http://localhost:5000) by default.
+**That's it!** At tis point you can see that Mockium is running in your terminal, exposing services at [port 5000](http://localhost:5000) by default.
 
-Now you can test the enpoint manually or using the provided web client in this project [in your browser](http://localhost:3000)
+Now you can test the enpoints manually or using the provided web client in this project [in your browser](http://localhost:3000).
 
 You will notice that nothing is runnig up to now in the client side. In this way, you will need to start the web server for accomplish that:
 
@@ -35,13 +35,13 @@ You will notice that nothing is runnig up to now in the client side. In this way
 npm start
 ```
 
-At this point, you could change features in the server, in order to change the responses and extend the server throughout the Mockium CLI running in your terminal.
+At this point, you could select different features in the server, in order to change the responses and extend the server throughout the Mockium CLI running in your terminal.
 
 For more information about managing the CLI you can visit the [Mockium CLI documentation](https://github.com/goncedillo/mockium#getting-started)
 
 #### Scaffolding
 
-The most important folder in this project is **mockium-files** which contains all the Mockium stuff. aas you can observe, all features are placed in the _features_ folder (as default) as well as _mocks_ with the mock files.
+The most important folder in this project is **mockium-files** which contains all the Mockium stuff. aas you can observe, all features are placed in the **features** folder (as default) as well as **mocks** with the mock files.
 
 The rest of files and folders are related with web server (based on [express](https://github.com/expressjs/express) server) and front-end resources.
 
