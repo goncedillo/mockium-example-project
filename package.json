@@ -1,0 +1,14 @@
+{
+  "name": "mockium-example-project",
+  "version": "1.0.0",
+  "description": "Example project for learning how to use Mockium",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "GonzaloCedillo <goncedillo@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

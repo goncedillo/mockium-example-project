@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mockium example</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/default.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+      }
+
+      header picture img {
+        max-width: 230px;
+      }
+
+      .navbar {
+        margin-top: 10px;
+      }
+
+      .hero p {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <picture>
+        <img src="/mockium-logo.png" alt="mockium-logo" />
+      </picture>
+      <h1 class="title">Mockium example</h1>
+    </header>
+
+    <section class="hero">
+      <p class="content">
+        You can test this simple but complete mock server adding as many links
+        as you want. Remember add new mocks and features in
+        <i>mockium-files</i> folder, in order to display the new endpoints
+        working.
+      </p>
+      <p class="content">
+        You can visit the
+        <a href="https://github.com/goncedillo/mockium" target="_blank"
+          >Mockium repository</a
+        >
+        for getting more information about using the server.
+      </p>
+      <footer>
+        <nav class="navbar">
+          <a class="button" href="http://localhost:5000/users">Get all users</a>
+          <a class="button" href="http://localhost:5000/users/123"
+            >Get only one user</a
+          >
+        </nav>
+      </footer>
+    </section>
+
+    <pre class="container"><code id="screen" class="json"></code></pre>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>
+      var $screen = document.getElementById("screen");
+      var $links = document.getElementsByTagName("a");
+
+      function getData(e) {
+        e.preventDefault();
+
+        $screen.innerHTML = "";
+
+        axios({
+          method: "GET",
+          url: e.currentTarget.href
+        }).then(resp => {
+          $screen.innerHTML = JSON.stringify(resp.data, null, "\t");
+          hljs.highlightBlock($screen);
+        });
+      }
+
+      for (var i = 0; i < $links.length; i++) {
+        $links[i].addEventListener("click", getData);
+      }
+
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>
