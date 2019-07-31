@@ -5,17 +5,34 @@ export const getAllUsersBasket = {
   method: "GET",
   response: {
     status: 200,
-    body: {
-      users: [
-        {
-          id: 1,
-          name: "Michael Jordan"
-        },
-        {
-          id: 2,
-          name: "Lebron James"
-        }
-      ]
+    body: request => {
+      if (request.query.position === "pivot") {
+        return {
+          users: [
+            {
+              id: 1,
+              name: "Marc Gasol"
+            },
+            {
+              id: 2,
+              name: "Joel Embiid"
+            }
+          ]
+        };
+      }
+
+      return {
+        users: [
+          {
+            id: 1,
+            name: "Michael Jordan"
+          },
+          {
+            id: 2,
+            name: "Lebron James"
+          }
+        ]
+      };
     }
   }
 };
