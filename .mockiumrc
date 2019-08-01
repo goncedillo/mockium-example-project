@@ -1,0 +1,10 @@
+{
+    "serverFolder": "./mockium-files",
+    "mocksFolder": "mocks",
+    "featuresFolder": "features",
+    "extension": "feature",
+    "mocksExtension": "mock",
+    "base": "base",
+    "serverPort": 5000,
+    "socketPort": 5001
+}

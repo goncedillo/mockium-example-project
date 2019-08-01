@@ -10,5 +10,15 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "mockium": {
+    "serverFolder": "./mockium-files",
+    "mocksFolder": "mocks",
+    "featuresFolder": "features",
+    "extension": "feature",
+    "mocksExtension": "mock",
+    "base": "base",
+    "serverPort": 7000,
+    "socketPort": 5001
   }
 }
