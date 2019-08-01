@@ -39,6 +39,10 @@ At this point, you could select different features in the server, in order to ch
 
 For more information about managing the CLI you can visit the [Mockium CLI documentation](https://github.com/goncedillo/mockium#getting-started)
 
+#### Configuration
+
+You can set all configuration usign parameters in command or using custom file `.mockiumrc` or even setting it in package.json. For more information about setting config files you can check out [Mockium config documentation](https://github.com/goncedillo/mockium#configuration)
+
 #### Scaffolding
 
 The most important folder in this project is **mockium-files** which contains all the Mockium stuff. aas you can observe, all features are placed in the **features** folder (as default) as well as **mocks** with the mock files.
