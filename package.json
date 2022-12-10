@@ -9,7 +9,7 @@
   "author": "GonzaloCedillo <goncedillo@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "mockium": {
     "serverFolder": "./mockium-files",
